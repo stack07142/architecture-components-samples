@@ -34,7 +34,7 @@ class UserActivity : AppCompatActivity() {
 
     private lateinit var viewModelFactory: ViewModelFactory
 
-    private val viewModel: UserViewModel by viewModels()
+    private lateinit var viewModel: UserViewModel
 
     private val disposable = CompositeDisposable()
 
@@ -43,6 +43,7 @@ class UserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user)
 
         viewModelFactory = Injection.provideViewModelFactory(this)
+        viewModel = viewModelFactory.create(UserViewModel::class.java)
         update_user_button.setOnClickListener { updateUserName() }
     }
 
