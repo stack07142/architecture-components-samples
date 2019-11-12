@@ -95,4 +95,10 @@ dependencies {
     androidTestImplementation deps.support.annotations
     androidTestImplementation deps.support.app_compat
     androidTestImplementation deps.support.design
+
+    // flipper
+    debugImplementation 'com.facebook.flipper:flipper:0.27.0'
+    debugImplementation 'com.facebook.soloader:soloader:0.8.0'
+
+    releaseImplementation 'com.facebook.flipper:flipper-noop:0.27.0'
 }
